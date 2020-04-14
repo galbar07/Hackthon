@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/fill" method="POST">
+        <table>
+            <tr>
+                    
+                <td><label>תעודת זהות:</label></td>
+                <td>
+
+                    <input type="text" name="user" id="name" value=<%=Id%> />
+                </td>
+            </tr>
+            <tr>
+                <td><label>האם אתה משתעל?</label></td>
+                <td><input type="text" name="coff" value="no" /></td>
+            </tr>
+            <tr>
+                <td><label>האם חום גופך מעל 38 מעלות? או שהיה לך חום השבוע?</label></td>
+                <td><input type="text" name="heat" value="no" /></td>
+            </tr>
+            <tr>
+                <td><label>האם היית במגע קרוב עם חולה קורונה בשבועיים האחרונים?</label></td>
+                <td><input type="text" name="contact" value="no" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><label>אני מצהיר שכל הדברים שכתובים בטופס זה נכונים</label>
+                <input required type="checkbox" name="confirm" /></td>
+            </tr>
+        </table>
+                <button type="submit">תשלח </button>
+    </form>
+
+
+
+</body>
+</html>
