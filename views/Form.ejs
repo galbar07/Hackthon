@@ -13,43 +13,25 @@
    <div class="myform">
     <form action="/fill" method="POST" class="form-style-4">
         <table>
-            <tr>
                     
-                <td><label>תעודת זהות:</label></td>
+                <tr><label>תעודת זהות:</label></tr>
+            <tr>
+                   <input type="text" name="userID" id="name"  value=<%=Id%> readonly/>
+                </tr>
+             <tr><label>שם מלא:</label></tr>
+            <tr>
+                   <input type="text" name="fname" id="fname"  value="<%=FName%>" readonly/>
+                </tr>
+            <tr><label>מקום עבודה</label></tr>
+            <tr>
+                   <input type="text" name="work" id="fname"  value="Ariel-Hackthon" readonly/>
+                </tr>
+            <tr><label>אני מצהיר\ה כי ערכתי היום בדיקה למדידת חום גוף בה נמצא כי חום גופי אינו עולה על 38 מעלות צלזיוס.</label></tr>
+            <tr>
+                <tr><label>אני מצהיר\ה כי איני משתעל וכן אין לי קשיים בנשימה למעט שיעול או קושי בנשימה הנובע ממצב כרוני כגון אסטמה או אלרגיה אחרת.</label></tr>
+            <tr>
                 <td>
-
-                    <input type="text" name="user" id="name" value=<%=Id%> />
-                </td>
-            </tr>
-            <tr>
-                <td><label for="coff">האם אתה משתעל?</label></td>
-                    <td><select id="coff" name="coff" value="no" >
-                            <option value="no">לא</option>
-                            <option value="yes">כן</option>
-                            <option value="no">כן אבל בגלל אסטמה או אלרגיה</option>
-                        </select>
-                    </td>
-            </tr>
-            <tr>
-                <td><label for="heat">האם חום גופך מעל 38 מעלות? או שהיה לך חום השבוע?</label></td>
-                    <td><select id="heat" name="heat" value="no" >
-                            <option value="no">לא</option>
-                            <option value="yes">כן</option>
-                        </select>
-                    </td>
-            </tr>
-            <tr>
-                <td><label>האם היית במגע קרוב עם חולה קורונה בשבועיים האחרונים?</label></td>
-                    <td><select id="contact" name="contact" value="no" >
-                            <option value="no">לא</option>
-                            <option value="yes">כן</option>
-                        </select>
-                    </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><label>אני מצהיר שכל הדברים שכתובים בטופס זה נכונים</label>
-                <input required type="checkbox" name="confirm" /></td>
+                    <label><input required type="checkbox" name="confirm" />&nbsp; אני מצהיר שכל הדברים שכתובים בטופס זה נכונים</label></td>
             </tr>
         </table>
                 <span> </span><input type="submit" value="שלח" />
