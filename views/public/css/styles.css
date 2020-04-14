@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
 }
+h1{
+    font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 40px;
+	color: #fff;
+}
 .header{
     margin: 0 auto;
     min-height: 30px;
