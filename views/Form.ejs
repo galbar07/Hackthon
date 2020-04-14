@@ -20,16 +20,29 @@
                 </td>
             </tr>
             <tr>
-                <td><label>האם אתה משתעל?</label></td>
-                <td><input type="text" name="coff" value="no" /></td>
+                <td><label for="coff">האם אתה משתעל?</label></td>
+                    <td><select id="coff" name="coff" value="no" >
+                            <option value="no">לא</option>
+                            <option value="yes">כן</option>
+                            <option value="no">כן אבל בגלל אסטמה או אלרגיה</option>
+                        </select>
+                    </td>
             </tr>
             <tr>
-                <td><label>האם חום גופך מעל 38 מעלות? או שהיה לך חום השבוע?</label></td>
-                <td><input type="text" name="heat" value="no" /></td>
+                <td><label for="heat">האם חום גופך מעל 38 מעלות? או שהיה לך חום השבוע?</label></td>
+                    <td><select id="heat" name="heat" value="no" >
+                            <option value="no">לא</option>
+                            <option value="yes">כן</option>
+                        </select>
+                    </td>
             </tr>
             <tr>
                 <td><label>האם היית במגע קרוב עם חולה קורונה בשבועיים האחרונים?</label></td>
-                <td><input type="text" name="contact" value="no" /></td>
+                    <td><select id="contact" name="contact" value="no" >
+                            <option value="no">לא</option>
+                            <option value="yes">כן</option>
+                        </select>
+                    </td>
             </tr>
             <tr>
                 <td></td>
