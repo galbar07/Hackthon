@@ -7,11 +7,15 @@ var conString = "postgres://ydzqisno:rYRJefbRoE4czrr1H2UurqUtrSNkp7R3@balarama.d
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
+
 var argv = require('minimist')(process.argv.slice(2));//Extract Id from Command Line
 
 
 Id = argv["_"][0];
+Name = argv["_"][1];
+Last = argv["_"][2];
+FName = Name+" "+Last;
 
 
 app.get("/",function(req,res){
@@ -34,7 +38,7 @@ app.get("/",function(req,res){
 
  app.post("/fill",function(req,res){
     console.log(req.body);
-    if(req.body.coff=="no" && req.body.heat=="no" && req.body.contact=="no"){
+    if(req.body.confirm=="on" ){
         res.redirect("sucess")
     }
     else{
@@ -66,15 +70,7 @@ function Conect_SQL(){
           if(err) {
             return console.error('error running query', err);
           }
-          console.log(result.rows)
-
-          
-            
-         
-         
-        
-          
-          
+          console.log(result.rows);
           client.end();
         });
       });
