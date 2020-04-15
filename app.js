@@ -1,11 +1,9 @@
 const express = require("express");
 const ejs= require("ejs");
 var pg = require('pg');
+require('dotenv').config();
 const bodyParser = require("body-parser");
-const accountSid = 'AC1466c4f4a98b5e5cf65842856a98fef1';
-const authToken = '89be4cf58ff12a12227c97f45725c27b';
-const client = require('twilio')(accountSid, authToken);
-var conString = "postgres://ydzqisno:rYRJefbRoE4czrr1H2UurqUtrSNkp7R3@balarama.db.elephantsql.com:5432/ydzqisno"; 
+const client = require('twilio')(process.env.ACCOUNTSID, process.env.AUTHTOKEN);
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -21,7 +19,6 @@ var month = currentDate.getMonth();
 var year = currentDate.getFullYear();
 var monthDateYear  =  date + "/" + (month+1)  + "/" + year;
 
-console.log(monthDateYear)
 
 var Id = argv["_"][0];
 var Heat = parseFloat(argv["_"][1]);
@@ -31,7 +28,7 @@ var Last_Name;
 var Company;
 
 function Conect_SQL(){
-  var client = new pg.Client(conString);
+  var client = new pg.Client(process.env.POSTGRESS);
     client.connect(function(err) {
         if(err) {
           return console.error('could not connect to postgres', err);
@@ -50,7 +47,7 @@ function Conect_SQL(){
 };
 
 function Update_Heat(){
-  var client = new pg.Client(conString);
+  var client = new pg.Client(process.env.POSTGRESS);
   client.connect(function(err) {
     if(err) {
       return console.error('could not connect to postgres', err);
@@ -133,7 +130,7 @@ app.post("/fill",function(req,res){
   
 app.listen(3000, function() {
   console.log("Server started on port 3000");
- // Conect_SQL();
+ Conect_SQL();
   
 
 });
