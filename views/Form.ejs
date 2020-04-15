@@ -22,17 +22,18 @@
       </div>
 
       <div class="form-label-group">
-        <input type="text" id="inputFullName" class="form-control" placeholder="שם מלא" required autofocus name="fullName" value="<%=First_Name%> <%=Last_Name%> " >
+
+        <input type="text" id="inputFullName" class="form-control" placeholder="שם מלא" required autofocus name="fullName" value="<%=First_Name%> <%=Last_Name%> "  readonly  />
         <label for="inputFullName">שם מלא</label>
       </div>
 	  
 	  <div class="form-label-group">
-        <input type="text" id="inputId" class="form-control" placeholder="תעודת זהות" required autofocus name="Id" value=<%=Id%> >
+        <input type="text" id="inputId" class="form-control" placeholder="תעודת זהות" required autofocus name="Id" value="<%=Id%>" readonly />
         <label for="inputId">תעודת זהות</label>
       </div>
 
       <div class="form-label-group">
-        <input type="text" id="inputCompany" class="form-control" placeholder="מקום עבודה" required name="company" value=<%=Company%> >
+        <input type="text" id="inputCompany" class="form-control" placeholder="מקום עבודה" required name="company" value="<%=Company%>" readonly />
         <label for="inputCompany">מקום עבודה</label>
       </div>
 	  
@@ -45,7 +46,7 @@
 	  
 	  
       <div class="form-label-group">
-        <input type="datetime" id="inputDate" class="form-control" placeholder="" required autofocus value=<%=monthDateYear%> >
+        <input type="datetime" id="inputDate" class="form-control" placeholder="" required autofocus value="<%=monthDateYear%>" readonly />
         <label for="inputDate">תאריך</label>
       </div>
 	  

@@ -2,6 +2,9 @@
 	    direction: rtl;
 		font-family: 'Varela Round', sans-serif;
 	}
+	.model{
+   	 	display: inline-block;
+	}
 	.modal-confirm {		
 		color: #434e65;
 		width: 525px;
