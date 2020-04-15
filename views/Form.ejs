@@ -1,44 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="/css/styles.css" rel="stylesheet" />
-    <title>Document</title>
-</head>
-<body>
- <div class="header">
-            טופס הצהרת בריאות
-        </div>
-   <div class="myform">
-    <form action="/fill" method="POST" class="form-style-4">
-        <table>
-                    
-                <tr><label>תעודת זהות:</label></tr>
-            <tr>
-                   <input type="text" name="userID" id="name"  value=<%=Id%> readonly/>
-                </tr>
-             <tr><label>שם מלא:</label></tr>
-            <tr>
-                   <input type="text" name="fname" id="fname"  value="<%=FName%>" readonly/>
-                </tr>
-            <tr><label>מקום עבודה</label></tr>
-            <tr>
-                   <input type="text" name="work" id="fname"  value="Ariel-Hackthon" readonly/>
-                </tr>
-            <tr><label>אני מצהיר\ה כי ערכתי היום בדיקה למדידת חום גוף בה נמצא כי חום גופי אינו עולה על 38 מעלות צלזיוס.</label></tr>
-            <tr>
-                <tr><label>אני מצהיר\ה כי איני משתעל וכן אין לי קשיים בנשימה למעט שיעול או קושי בנשימה הנובע ממצב כרוני כגון אסטמה או אלרגיה אחרת.</label></tr>
-            <tr>
-                <td>
-                    <label><input required type="checkbox" name="confirm" />&nbsp; אני מצהיר שכל הדברים שכתובים בטופס זה נכונים</label></td>
-            </tr>
-        </table>
-                <span> </span><input type="submit" value="שלח" />
+<!doctype html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>our website</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css"  href="/css/styles.css">
+  </head>
+
+ <body >
+ <span class="border border-primary text-right" >
+    <form class="form-signin" action="/fill" method="POST">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="/photos/logo.jpeg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">טופס הצהרת בריאות</h1>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputFullName" class="form-control" placeholder="שם מלא" required autofocus name="fullName" value=<%=First_Name%>  >
+        <label for="inputFullName">שם מלא</label>
+      </div>
+	  
+	  <div class="form-label-group">
+        <input type="text" id="inputId" class="form-control" placeholder="תעודת זהות" required autofocus name="Id" value=<%=Id%> >
+        <label for="inputId">תעודת זהות</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputCompany" class="form-control" placeholder="מקום עבודה" required name="company" value=<%=Company%> >
+        <label for="inputCompany">מקום עבודה</label>
+      </div>
+	  
+	  <div  class="form-label-group">
+	   <ul>
+		<li>אני מצהיר\ה כי ערכתי היום בדיקה למדידת חום גוף, בה נמצא כי חום גופי אינו עולה על 38 מעלות צלזיוס </li>
+		<li>אני מצהיר\ה כי איני משתעל\ת וכן אין לי קשיים בנשימה.</li>
+	  </ul> 
+	  </div>
+	  
+	  
+	  <div class="form-label-group">
+        <input type="datetime" id="inputDate" class="form-control" placeholder="Id" required autofocus>
+        <label for="inputDate">תאריך</label>
+      </div>
+	  
+	 <p>למעט שיעול או קושי בנשימה הנובע ממצב כרוני כגון אסטמה או אלרגיה אחרת</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">אשר ושלח</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; GM-LAB</p>
     </form>
-    </div>
-
-
-
-</body>
+	</span>
+  </body>
 </html>
