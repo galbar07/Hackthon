@@ -13,7 +13,15 @@ app.use(express.static(__dirname + '/public'));
 
 
 var argv = require('minimist')(process.argv.slice(2));//Extract Id from Command Line
+var currentDate = new Date();
 
+
+var date = currentDate.getDate();
+var month = currentDate.getMonth(); 
+var year = currentDate.getFullYear();
+var monthDateYear  =  date + "/" + (month+1)  + "/" + year;
+
+console.log(monthDateYear)
 
 var Id = argv["_"][0];
 var Heat = parseFloat(argv["_"][1]);
@@ -86,6 +94,7 @@ function Check_heat(){
 //    body: 'Hi'+First_Name +" "+ Last_Name +', please fill the following form : http://localhost:3000/Form',
 //    from: '+19382229581',
 //    to:'+972'+phone
+
 //  })
 // .then(message => console.log(message.sid));
 //   }
@@ -93,16 +102,13 @@ function Check_heat(){
 
 }
 
-
-
-
 app.get("/",function(req,res){
   res.send("Hello");
   
 });
 
 app.get("/form",function(req,res){
-  res.render("Form",{First_Name,Id,Company});
+  res.render("Form",{First_Name,Id,Company,monthDateYear});
 });
 
 app.get("/sucess",function(req,res){
@@ -127,7 +133,7 @@ app.post("/fill",function(req,res){
   
 app.listen(3000, function() {
   console.log("Server started on port 3000");
-  Conect_SQL();
+ // Conect_SQL();
   
 
 });
