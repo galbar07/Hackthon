@@ -19,3 +19,15 @@
 - If your temperature below 38 you will recieve an SMS asking of you to fill out medical form
 
 <img src="public/photos_readme/Hackthon.jpeg">
+
+
+#    Code - Diagram
+
+<img src="public/photos_readme/Code_Diagram.PNG">
+
+#    Code - Explantaion
+This code based build in Node.js based on Express NPM:
+- App.js - Mannage all the Http requests and responses , Mannage SQL connections.
+- Tools.js - Logical functions 
+- Form.ejs - Medical form that only allows to access you receive the Url from Us
+- Success.ejs - If you approve the form you are being redirected to that page, it will let you access your workplace.
