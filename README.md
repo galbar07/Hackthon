@@ -18,3 +18,4 @@
 - If your temperature more that 38 an SMS message will sent to you, Asking of you to go home.
 - If your temperature below 38 you will recieve an SMS asking of you to fill out medical form
 
+<img src="public/photos_readme/Hackthon.jpeg">
