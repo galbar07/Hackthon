@@ -6,7 +6,15 @@
   html,
   body {
 	height: 100%;
+	text-align: center;
+      	padding: 10px;
   }
+	.border-primary{
+  	  min-width: 40px;
+   	 display: inline-block;
+   	 flex: 1 20px;
+   	 padding: 0;
+	}
   
   body {
 	direction: rtl;
